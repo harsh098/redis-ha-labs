@@ -4,22 +4,7 @@ Setting up HA redis clusters
 
 # AWS Lab
 
-## Lab 1 Sentinels
-
-```
-AZ-1                  AZ-2                  AZ-3
-+---------+           +---------+           +---------+
-| Redis   |           | Redis   |           | Redis   |
-| Master  |           | Replica |           | Replica |
-+---------+           +---------+           +---------+
-     |                     |                     |
-     |-------------------Replication-------------|
-     |                     |                     |
-+---------+           +---------+           +---------+
-| Sentinel|           | Sentinel|           | Sentinel|
-+---------+           +---------+           +---------+
-
-```
+WIP
 
 ## Lab 2 Migration to DragonFly
 
