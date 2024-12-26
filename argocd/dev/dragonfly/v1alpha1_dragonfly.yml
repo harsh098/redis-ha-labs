@@ -21,5 +21,10 @@ spec:
   snapshot:
     persistentVolumeClaimSpec:
       storageClassName: gp2
+      resources:
+        requests:
+          storage: 8Gi
+        limits: 
+          storage: 8Gi
       accessModes: 
       - ReadWriteOnce
