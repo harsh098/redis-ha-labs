@@ -16,8 +16,9 @@ spec:
       containers:
       - name: redis-shake-migration
         image: hmx098/redis-shake:v4.3.1 # Replace with your container image
-        command: ["./redis-shake"]
-        args: ["/app/shake.toml"]
+        # command: ["./redis-shake"]
+        # args: ["/app/shake.toml"]
+        command: ["sleep 86400"]
         volumeMounts:
         - name: config-volume
           mountPath: /app
