@@ -27,7 +27,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ${{ github.workspace }}/terraform/dev
+        working-directory: ${{ github.workspace }}/terraform/environments/prod
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
