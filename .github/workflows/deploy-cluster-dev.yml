@@ -1,7 +1,6 @@
 name: Provision Kubernetes Cluster [DEV]
 
 on:
-  on:
   workflow_dispatch:
   pull_request:
     branches: [main]
