@@ -27,5 +27,6 @@ variable "vpc_cidr" {
 
 variable "cluster_name" {
   type = string
-  description = "Name of the EKS Cluster"  
+  description = "Name of the EKS Cluster"
+  default = "default-cluster"
 }
