@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-shake-migration
+  namespace: redis-shake-migration
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-shake-migration
+  template:
+    metadata:
+      labels:
+        app: redis-shake-migration
+    spec:
+      containers:
+      - name: redis-shake-migration
+        image: hmx098/redis-shake:v4.3.1 # Replace with your container image
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app
+          subPath: shake.toml
+      volumes:
+      - name: config-volume
+        configMap:
+          name: redis-shake-migration-config

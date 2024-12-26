@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-shake-migration-config
+  namespace: redis-shake-migration
+data:
+  config.toml: |
+    [sync_reader]
+    cluster = false
+    address = "" # The source Redis address will be obtained from Sentinel
+    username = ""
+    password = "password"
+    tls = false
+    [sync_reader.sentinel]
+    master_name = "mymaster"
+    address = "redis.redis:26379"
+    username = ""
+    password = "password"
+    tls = false
+    [redis_writer]
+    cluster=false
+    address="dragonfly-sample.dragonflydb:0"
+    username=""
+    password=""
+    tls=false
