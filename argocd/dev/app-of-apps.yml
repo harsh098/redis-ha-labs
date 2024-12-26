@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: https://github.com/harsh098/redis-ha-labs
+    repoURL: https://github.com/harsh098/redis-ha-labs.git
     path: argocd/dev  # Update for stage/prod
     targetRevision: HEAD
   syncPolicy:
