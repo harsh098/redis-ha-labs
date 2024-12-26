@@ -17,7 +17,7 @@ permissions:
 jobs:
   create_infra:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true || github.event.
+    if: github.event.pull_request.merged == true 
     env:
       TF_LOG: INFO
       TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
