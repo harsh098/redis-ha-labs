@@ -22,7 +22,7 @@ spec:
     helm:
       parameters:
       - name: namespace
-        value: cert-manager
+        value: redis
       valueFiles:
       - $values/argocd/dev/redis/values.yml
   - repoURL: 'https://github.com/harsh098/redis-ha-labs.git'
