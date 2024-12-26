@@ -1,15 +1,28 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+metadata:
+  name: redis
+  namespace: argocd
 spec:
   destination:
     namespace: redis
     server: https://kubernetes.default.svc
   project: default
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+
   sources:
   - repoURL: 'https://charts.bitnami.com/bitnami'
     chart: redis
     targetRevision: 20.6.1
     helm:
+      parameters:
+      - name: namespace
+        value: cert-manager
       valueFiles:
       - $values/argocd/dev/redis/values.yml
   - repoURL: 'https://github.com/harsh098/redis-ha-labs.git'
