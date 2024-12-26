@@ -4,7 +4,7 @@ metadata:
   name: redis-shake-migration-config
   namespace: redis-shake-migration
 data:
-  config.toml: |
+  shake.toml: |
     [sync_reader]
     cluster = false
     address = "" # The source Redis address will be obtained from Sentinel
