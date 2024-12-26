@@ -30,6 +30,10 @@ module "eks" {
         }
       })
     }
+    aws-ebs-csi-driver = {
+      most_recent = true
+      service_account_role_arn = var.iam_role_arn
+    }
   }, var.cluster_addons)
 
 
@@ -91,7 +95,6 @@ module "eks" {
       }
     }
   }
-
   tags = local.tags
   iam_role_additional_policies = var.iam_role_additional_policies 
 }
