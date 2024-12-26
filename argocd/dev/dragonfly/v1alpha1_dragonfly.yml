@@ -21,3 +21,5 @@ spec:
   snapshot:
     persistentVolumeClaimSpec:
       storageClassName: gp2
+      accessModes: 
+      - ReadWriteOnce
