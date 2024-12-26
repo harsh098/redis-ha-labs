@@ -16,7 +16,7 @@ spec:
       selfHeal: true
 
   sources:
-  - repoURL: 'https://charts.bitnami.com/bitnami'
+  - repoURL: registry-1.docker.io/bitnamicharts
     chart: redis
     targetRevision: 20.6.1
     helm:
