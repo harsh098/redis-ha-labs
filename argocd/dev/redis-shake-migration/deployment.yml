@@ -17,13 +17,12 @@ spec:
       - name: redis-shake-migration
         image: hmx098/redis-shake:v4.3.1 # Replace with your container image
         # command: ["./redis-shake"]
-        # args: ["/app/config/shake.toml"]
+        # args: ["/app/shake.toml"]
         command: ["/bin/sh"]
         args: ["-c", " sleep infinity"]
         volumeMounts:
         - name: config-volume
-          mountPath: /app/config
-          subPath: shake.toml
+          mountPath: /app/shake.toml
       volumes:
       - name: config-volume
         configMap:
