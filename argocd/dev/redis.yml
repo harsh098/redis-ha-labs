@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+  - repoURL: 'https://charts.bitnami.com/bitnami'
+    chart: redis
+    targetRevision: 20.6.1
+    helm:
+      valueFiles:
+      - $values/argocd/dev/redis/values.yml
+  - repoURL: 'https://github.com/harsh098/redis-ha-labs.git'
+    targetRevision: HEAD
+    ref: values
