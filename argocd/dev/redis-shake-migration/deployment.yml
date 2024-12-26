@@ -18,7 +18,8 @@ spec:
         image: hmx098/redis-shake:v4.3.1 # Replace with your container image
         # command: ["./redis-shake"]
         # args: ["/app/shake.toml"]
-        command: ["sleep 86400"]
+        command: ["/bin/sh"]
+        args: ["-c", " sleep infinity"]
         volumeMounts:
         - name: config-volume
           mountPath: /app
