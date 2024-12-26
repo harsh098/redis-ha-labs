@@ -1,5 +1,6 @@
 module "vpc" {
   source      = "../../modules/vpc"
+  vpc_name    = var.vpc_name 
   environment = var.environment
   vpc_cidr    = var.vpc_cidr
   aws_region  = var.aws_region
