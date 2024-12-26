@@ -13,13 +13,13 @@ data:
     tls = false
     [sync_reader.sentinel]
     master_name = "mymaster"
-    address = "redis.redis:26379"
+    address = "redis.redis.svc.cluster.local:26379"
     username = ""
     password = "password"
     tls = false
     [redis_writer]
     cluster=false
-    address="dragonfly-sample.dragonflydb:0"
+    address="dragonfly-sample.dragonflydb.svc.cluster.local:6379"
     username=""
     password=""
     tls=false
