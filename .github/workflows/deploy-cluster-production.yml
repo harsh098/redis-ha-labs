@@ -17,7 +17,7 @@ permissions:
 jobs:
   create_infra:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     env:
       TF_LOG: INFO
       TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
