@@ -1,4 +1,5 @@
 global:
+  storageClass: gp2
   redis:
     password: password
 replica:
