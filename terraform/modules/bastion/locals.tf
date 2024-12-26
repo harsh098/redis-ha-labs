@@ -33,7 +33,8 @@ locals {
 
 
   # Update Kubectl
-  aws eks update-kubeconfig --name ${var.cluster_name}-${var.environment}"
+  aws eks update-kubeconfig --name ${var.cluster_name}-${var.environment}
+
   EOT
 
   tags = {
